@@ -1,4 +1,4 @@
-FROM 11.56.30.169:8082/python:3.8-alpine
+FROM python:3.8-alpine
 
 LABEL maintainer "florian.stosse@safrangroup.com"
 LABEL lastupdate "16-04-2020"
