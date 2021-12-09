@@ -1,18 +1,6 @@
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
-# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
-
 version: 2
-dockerhub: # Define access for a private registry 
-    type: docker-registry
-    url: registry.hub.docker.com
-    username: ${{DOCKERHUB_USERNAME}}
-    token: ${{secrets.DOCKERHUB_TOKEN}}
 updates:
   - package-ecosystem: "docker" # See documentation for possible values
     directory: "/" # Location of package manifests
-    registries:
-      - dockerhub
     schedule:
       interval: "daily"
