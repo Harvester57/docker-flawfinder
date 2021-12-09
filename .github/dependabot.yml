@@ -8,11 +8,11 @@ dockerhub: # Define access for a private registry
     type: docker-registry
     url: registry.hub.docker.com
     username: ${{DOCKERHUB_USERNAME}}
-    password: ${{secrets.DOCKERHUB_TOKEN}}
+    token: ${{secrets.DOCKERHUB_TOKEN}}
 updates:
   - package-ecosystem: "docker" # See documentation for possible values
     directory: "/" # Location of package manifests
     registries:
-      - dockerhub # Allow version updates for dependencies in this registry
+      - dockerhub
     schedule:
       interval: "daily"
