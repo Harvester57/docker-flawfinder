@@ -10,7 +10,7 @@ LABEL license "MIT license"
 RUN addgroup -g 666 appuser && \
     mkdir -p /home/appuser && \
     adduser -D -h /home/appuser -u 666 -G appuser appuser && \
-    chown -R appuser:appuser /home/appuserr
+    chown -R appuser:appuser /home/appuser
 ENV PATH="/home/appuser/.local/bin:${PATH}"
 USER appuser
 
