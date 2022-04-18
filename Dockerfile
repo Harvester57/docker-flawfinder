@@ -2,10 +2,18 @@
 FROM python:3.10.4-alpine3.15
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "2022-03-28"
+LABEL lastupdate "2022-04-18"
 LABEL author "Florian Stosse"
 LABEL description "FlawFinder v2.0.19, built using Python v3.10.4 Alpine-based image"
 LABEL license "MIT license"
 
+RUN addgroup -g 999 appuser && \
+    mkdir -p /home/appuser && \
+    adduser -h /home/appuser -u 999 -G appuser appuser && \
+    chown -R appuser:appuser /home/appuser
+ENV PATH="/home/appuser/.local/bin:${PATH}"
+USER appuser
+
 # Cf. https://pypi.org/project/flawfinder/
-RUN pip3 install --trusted-host files.pythonhosted.org flawfinder==2.0.19
+RUN pip3 install --upgrade pip && \
+    pip3 install --trusted-host files.pythonhosted.org flawfinder==2.0.19 --user
