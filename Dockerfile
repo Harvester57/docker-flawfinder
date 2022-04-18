@@ -7,9 +7,9 @@ LABEL author "Florian Stosse"
 LABEL description "FlawFinder v2.0.19, built using Python v3.10.4 Alpine-based image"
 LABEL license "MIT license"
 
-RUN addgroup -g 999 appuser && \
+RUN addgroup -g 666 appuser && \
     mkdir -p /home/appuser && \
-    adduser -h /home/appuser -u 999 -G appuser appuser && \
+    adduser -h /home/appuser -u 666 -G appuser appuser && \
     chown -R appuser:appuser /home/appuser
 ENV PATH="/home/appuser/.local/bin:${PATH}"
 USER appuser
