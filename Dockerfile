@@ -15,5 +15,5 @@ ENV PATH="/home/appuser/.local/bin:${PATH}"
 USER appuser
 
 # Cf. https://pypi.org/project/flawfinder/
-RUN pip3 install --upgrade pip && \
+RUN /usr/local/bin/python -m pip install --upgrade pip && \
     pip3 install --trusted-host files.pythonhosted.org flawfinder==2.0.19 --user
