@@ -1,8 +1,8 @@
 # Cf. https://hub.docker.com/_/python
-FROM python:3.10.5-alpine3.15
+FROM python:3.10.5-alpine3.16
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "2022-04-18"
+LABEL lastupdate "2022-07-09"
 LABEL author "Florian Stosse"
 LABEL description "FlawFinder v2.0.19, built using Python v3.10.4 Alpine-based image"
 LABEL license "MIT license"
