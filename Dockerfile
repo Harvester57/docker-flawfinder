@@ -1,10 +1,10 @@
 # Cf. https://hub.docker.com/_/python
-FROM python:3.11.4-alpine3.18
+FROM python:3.11.5-alpine3.18
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "2023-06-23"
+LABEL lastupdate "2023-09-23"
 LABEL author "Florian Stosse"
-LABEL description "FlawFinder v2.0.19, built using Python v3.11.4 Alpine-based image"
+LABEL description "FlawFinder v2.0.19, built using Python v3.11.5 Alpine-based image"
 LABEL license "MIT license"
 
 RUN addgroup -g 666 appuser && \
