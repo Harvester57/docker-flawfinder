@@ -7,6 +7,9 @@ LABEL author="Florian Stosse"
 LABEL description="FlawFinder v2.0.19, built using Python v3.14.0 Alpine-based image"
 LABEL license="MIT license"
 
+RUN apk update && \
+    apk upgrade --available
+
 RUN addgroup -g 666 appuser && \
     mkdir -p /home/appuser && \
     adduser -D -h /home/appuser -u 666 -G appuser appuser && \
