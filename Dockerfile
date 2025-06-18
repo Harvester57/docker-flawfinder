@@ -1,5 +1,5 @@
 # Cf. https://hub.docker.com/_/python
-FROM python:3.14-rc-alpine3.21@sha256:5e26d8ce6b15c831b1be412038bd8140935e6f5925290545231a0d8dd55c42aa
+FROM python:3.14-rc-alpine3.21@sha256:89533fed0e1180e13218b8660f04ddb7f92a7669d9f8589b5756a11117a44e94
 
 LABEL maintainer="florian.stosse@gmail.com"
 LABEL lastupdate="2025-04-27"
