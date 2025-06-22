@@ -1,10 +1,10 @@
 # Cf. https://hub.docker.com/_/python
-FROM python:3.14-rc-alpine3.21@sha256:b472430404d83a80c95c9387338c09d4e7218632cfb9daed2d3978db4966648d
+FROM python:3.13-alpine@sha256:9b4929a72599b6c6389ece4ecbf415fd1355129f22bb92bb137eea098f05e975
 
 LABEL maintainer="florian.stosse@gmail.com"
-LABEL lastupdate="2025-04-27"
+LABEL lastupdate="2025-06-22"
 LABEL author="Florian Stosse"
-LABEL description="FlawFinder v2.0.19, built using Python v3.14.0 Alpine-based image"
+LABEL description="FlawFinder v2.0.19, built using Python v3.13 Alpine-based image"
 LABEL license="MIT license"
 
 RUN apk update && \
