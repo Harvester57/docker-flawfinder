@@ -19,4 +19,4 @@ USER appuser
 
 # Cf. https://pypi.org/project/flawfinder/
 RUN /usr/local/bin/python -m pip install --upgrade pip && \
-    pip3 install --trusted-host files.pythonhosted.org flawfinder==2.0.19 --user
+    pip3 install --trusted-host files.pythonhosted.org flawfinder==2.0.19 --user --no-cache-dir
