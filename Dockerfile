@@ -20,5 +20,9 @@ RUN addgroup -g 666 appuser && \
 ENV PATH="/home/appuser/.local/bin:${PATH}"
 USER appuser
 
+COPY requirements.txt .
+
 # Cf. https://pypi.org/project/flawfinder/
-RUN pip3 install flawfinder==2.0.19 --user --no-cache-dir
+RUN pip3 install -r requirements.txt --user --no-cache-dir
+
+ENTRYPOINT [ "flawfinder" ]

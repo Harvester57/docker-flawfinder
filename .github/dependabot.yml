@@ -28,3 +28,12 @@ updates:
       applies-to: version-updates
       patterns:
       - "*"
+- package-ecosystem: "pip"
+  directory: "/"
+  commit-message:
+    prefix: "pip"
+  labels: [ 'chore' ]
+  assignees:
+  - "Harvester57"
+  schedule:
+    interval: "weekly"
