@@ -7,19 +7,6 @@ LABEL author="Florian Stosse"
 LABEL description="FlawFinder v2.0.19, built using Python v3.14 Alpine-based image"
 LABEL license="MIT license"
 
-# Upgrade packages and pip
-RUN apk update && \
-    apk upgrade --available && \
-    /usr/local/bin/python -m pip install --upgrade pip
-
-RUN addgroup -g 666 appuser && \
-    mkdir -p /home/appuser && \
-    adduser -D -h /home/appuser -u 666 -G appuser appuser && \
-    chown -R appuser:appuser /home/appuser
-
-ENV PATH="/home/appuser/.local/bin:${PATH}"
-USER appuser
-
 COPY requirements.txt .
 
 # Cf. https://pypi.org/project/flawfinder/
